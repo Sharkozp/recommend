@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Webinse_Recommend>
+            <version>0.1.0</version>            
+        </Webinse_Recommend>
+    </modules>
+    <global>
+        
+        <blocks>
+            <recommend>
+                <class>Webinse_Recommend_Block</class>
+            </recommend>
+        </blocks>
+        
+        <helpers>
+            <recommend>
+                <class>Webinse_Recommend_Helper</class>
+            </recommend>
+        </helpers>
+        
+        <models>
+            <recommend>
+                <class>Webinse_Recommend_Model</class>
+                <resourceModel>recommend_resource</resourceModel>
+            </recommend>
+            
+            <recommend_resource>
+                <class>Webinse_Recommend_Model_Resource</class>
+                <entities>
+                    <resource_table>
+                        <table>recommend_table</table>
+                    </resource_table>
+                </entities>
+            </recommend_resource>
+        </models>
+        
+        <resources>
+            <recommend_setup>
+                <setup>
+                    <module>Webinse_Recommend</module>
+                </setup>
+            </recommend_setup>
+        </resources>    
+            
+    </global>
+    <frontend>
+        
+        <routers>
+            <recommend>
+                <use>standard</use>
+                <args>
+                    <module>Webinse_Recommend</module>
+                    <frontName>recommend</frontName>
+                </args>
+            </recommend>
+        </routers>      
+          
+        <layout>
+            <updates>
+                <recommend>
+                    <file>recommend.xml</file>
+                </recommend>
+            </updates>
+        </layout>  
+              
+    </frontend>
+    
+    <admin>
+        <routers>
+            <recommend>
+                <use>admin</use>
+                <args>
+                    <module>Webinse_Recommend</module>
+                    <frontName>recommend</frontName>
+                </args>
+            </recommend>
+        </routers>
+    </admin>
+    
+</config>

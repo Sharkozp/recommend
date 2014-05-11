@@ -1,0 +1,28 @@
+<div class="block block">
+    <div class="block-title"><strong><span><?php echo $this->getBlockTitle(); ?></span></strong></div>    
+
+    <ol class="mini-products-list">
+        <?php
+        foreach ($this->getAllRecords() as $record):
+            $product = $this->getProduct($record->getEntityId());
+            $link = $this->getBaseUrl() . $product->getUrlPath();
+            $name = $product->getName();
+            ?>
+        <li class="item" style="padding: 7px 9px;" >
+                <a href="<?php echo $link; ?>" title="<?php echo $name; ?>" class="product-image">
+                    <img src="<?php echo $product->getImageUrl(); ?>" width="50" height="50" alt="<?php echo $name; ?>">
+                </a>
+                <div class="product-details">
+                    <p class="product-name">
+                        <a href="<?php echo $link; ?>"><?php echo $name; ?></a>
+                    </p>                  
+
+
+                    <span class="price"><?php echo $this->getPrice($product->getPrice()); ?></span>       
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ol>
+
+
+</div>

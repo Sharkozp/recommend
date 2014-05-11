@@ -1,0 +1,10 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="content"/>
+    </default>    
+    <recommend_index_index>
+        <reference name="left">
+        <block type="recommend/recommend" name="recommends" template="webinse/recommends.phtml" />
+        </reference>
+    </recommend_index_index>
+</layout>

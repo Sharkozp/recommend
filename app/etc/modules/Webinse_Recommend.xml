@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Webinse_Recommend>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Webinse_Recommend>
+    </modules>
+</config>

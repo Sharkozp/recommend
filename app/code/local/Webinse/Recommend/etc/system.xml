@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <recommend_tab>
+            <label>Recommend Module</label>
+            <sort_order>100000</sort_order>
+        </recommend_tab>
+    </tabs>
+    <sections>
+        <configuration_section translate="label">
+            <label>Configuration</label>
+            <tab>recommend_tab</tab>
+            <frontend_type></frontend_type>
+            <sort_order>910</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <main_group translate="label">
+                    <label>Main</label>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <name translate="label">
+                            <label>Name of block</label>
+                            <frontend_type>text</frontend_type>                           
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>
+                        <quantity translate="label">
+                            <label>Quantity of products</label>
+                            <frontend_type>text</frontend_type>                         
+                            <validate>validate-digits</validate>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </quantity>
+                    </fields>
+                </main_group>
+            </groups>
+        </configuration_section>
+    </sections>
+</config>
